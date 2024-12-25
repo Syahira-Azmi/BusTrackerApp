@@ -7,35 +7,43 @@
     android:background="@color/white"
     tools:context=".Homepage">
 
-    <!-- Back Arrow -->
-    <ImageView
-        android:id="@+id/back_arrow"
-        android:layout_width="23dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="backarrow"
-        android:src="@drawable/backarrow" />
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentTop="true"
+        tools:ignore="ExtraText">
 
-    <!-- Page Title
-    <TextView
-        android:id="@+id/page_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/back_arrow"
-        android:layout_alignTop="@id/back_arrow"
-        android:layout_marginStart="8dp"
-        android:text="Homepage"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-medium" /> -->
-    <!-- Current Location -->
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="79dp"
+            android:layout_height="74dp"
+            android:src="@drawable/_731547789728" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/alkatra_bold"
+            android:text="BUS TRACKER APP"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+         </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/current_location"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/back_arrow"
-        android:layout_marginTop="32dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="110dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#6200EE">
@@ -45,75 +53,88 @@
             android:id="@+id/current_location_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/location"
-            android:contentDescription="Current Location Icon" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="349dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="Current Location Icon"
+            android:src="@drawable/location" />
 
-        <EditText
-            android:id="@+id/current_location_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/current_location_icon"
-            android:layout_marginStart="8dp"
-            android:layout_alignTop="@id/current_location_icon"
-            android:hint="Current Location"
-            android:inputType="text"
-            android:drawablePadding="10dp"
-            android:padding="10dp"
-            android:textColorHint="#BEBEBE"
-            android:textSize="16sp" />
-
-
+        <Spinner
+            android:id="@+id/current_spinner"
+            android:layout_width="329dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#6200EE"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
     </RelativeLayout>
+    <!--  Divider  -->
+    <!--  Confirm Button  -->
+    <!--  Bottom Navigation  -->
 
-    <!-- Divider -->
-    <View
+    <RelativeLayout
+        android:id="@+id/destination_location"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/current_location"
-        android:layout_marginTop="8dp"
-        android:background="@color/black" />
-
-    <!-- Destination Dropdown -->
-
-    <Spinner
-        android:id="@+id/destination_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/current_location"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#6200EE"
-        android:gravity="center_vertical"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:popupBackground="@color/white"
-        android:spinnerMode="dropdown"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textSize="14sp" />
+        android:backgroundTint="#6200EE">
 
-    <ImageView
-        android:id="@+id/destination_location_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="154dp"
-        android:src="@drawable/location"
-        android:contentDescription="Destination Location Icon" />
 
-    <!-- Confirm Button -->
+        <ImageView
+            android:id="@+id/destination_location_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="349dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="Destination Location Icon"
+            android:src="@drawable/location" />
 
-    <!-- Bottom Navigation -->
+        <Spinner
+            android:id="@+id/destination_spinner"
+            android:layout_width="329dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#6200EE"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="66dp"
         android:paddingStart="15dp"
@@ -121,7 +142,7 @@
         android:backgroundTint="#7A4EFF"
         android:text="Confirm"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
     <LinearLayout
         android:id="@+id/bottom_navigation"
@@ -131,7 +152,7 @@
         android:orientation="horizontal"
         android:background="#F3EDF7">
 
-        <!-- Bus Station -->
+        <!--  Bus Station  -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -144,7 +165,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/busstop"
-                android:contentDescription="Bus Station Icon" />
+                android:contentDescription="Bus Station Icon"/>
 
             <TextView
                 android:id="@+id/bus_station_text"
@@ -153,10 +174,9 @@
                 android:layout_marginTop="4dp"
                 android:text="Bus Station"
                 android:textSize="12sp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"/>
         </LinearLayout>
-
-        <!-- Profile -->
+        <!--  Profile  -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -169,7 +189,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/user"
-                android:contentDescription="Profile Icon" />
+                android:contentDescription="Profile Icon"/>
 
             <TextView
                 android:id="@+id/profile_text"
@@ -178,8 +198,8 @@
                 android:layout_marginTop="4dp"
                 android:text="Profile"
                 android:textSize="12sp"
-                android:textColor="@color/black" />
-        </LinearLayout>
+                android:textColor="@color/black"/>
 
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
