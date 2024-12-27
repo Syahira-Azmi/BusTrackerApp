@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">Bus Tracker App</string>
-    <string-array name="roles_array">
-        <item>Bus Driver</item>
-        <item>Student</item>
-    </string-array>
 
     <string-array name="destination_options">
         <item>Kolej Kediaman Satria</item>
@@ -15,10 +11,9 @@
         <item>Kompleks Dewan Kuliah</item>
         <item>Laluan Durian Tunggal</item>
         <item>Pangsapuri Sri Utama(SU)</item>
-        <item>Pangsapuri Ixora</item>
         <item>Emerald Park</item>
 
 
-
     </string-array>
+  
 </resources>
