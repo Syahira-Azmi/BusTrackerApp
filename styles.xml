@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for Station Buttons -->
+    <style name="StationButtonStyle" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textColor">#FFFFFF</item> <!-- White text -->
+        <item name="android:textStyle"></item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
+</resources>
